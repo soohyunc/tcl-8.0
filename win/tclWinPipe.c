@@ -775,6 +775,36 @@ TclpCloseFile(file)
 /*
  *--------------------------------------------------------------------------
  *
+ * TclpGetProcess --
+ *
+ *	Given a process id return the Handle.
+ *
+ * Results:
+ *  Return the process handle, if the process id was unknown return 0
+ *
+ * Side effects:
+ *	None.
+ *
+ *--------------------------------------------------------------------------
+ */
+
+HANDLE
+TclpGetProcess(pid)
+    unsigned long pid;	
+{
+    ProcInfo *infoPtr;
+    
+    for (infoPtr = procList; infoPtr != NULL; infoPtr = infoPtr->nextPtr) {
+	if (infoPtr->dwProcessId == pid) {
+	    return infoPtr->hProcess;
+	}
+    }
+    return 0;
+}
+
+/*
+ *--------------------------------------------------------------------------
+ *
  * TclpGetPid --
  *
  *	Given a HANDLE to a child process, return the process id for that
