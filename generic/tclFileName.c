@@ -1074,15 +1074,21 @@ DoTildeSubst(interp, user, resultPtr)
 				 * anything at the time of the call, and need
 				 * not even be initialized. */
 {
-    char *dir;
+    char *dir, *home_var;
 
     if (*user == '\0') {
-	dir = TclGetEnv("HOME");
-	if (dir == NULL) {
+            
+#ifdef WIN32
+            home_var = "HOMEDIR";
+
+#else
+            home_var = "HOME";
+#endif
+            dir = TclGetEnv(home_var);
+            if (dir == NULL) {
 	    if (interp) {
 		Tcl_ResetResult(interp);
-		Tcl_AppendResult(interp, "couldn't find HOME environment ",
-			"variable to expand path", (char *) NULL);
+		Tcl_AppendResult(interp, "couldn't find environment variable specifying home directory: ", home_var, (char *) NULL);
 	    }
 	    return NULL;
 	}
