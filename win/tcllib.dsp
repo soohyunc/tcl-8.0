@@ -438,7 +438,7 @@ InputPath=..\library\history.tcl
 InputName=history
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\Debug_IPv6\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -478,7 +478,7 @@ InputPath=..\library\http2.0\http.tcl
 InputName=http
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\Debug_IPv6\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -518,7 +518,7 @@ InputPath=..\library\init.tcl
 InputName=init
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\Debug_IPv6\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -558,7 +558,7 @@ InputPath=..\library\ldAout.tcl
 InputName=ldAout
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\Debug_IPv6\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -598,7 +598,7 @@ InputPath=..\library\opt0.1\optparse.tcl
 InputName=optparse
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\Debug_IPv6\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -638,7 +638,7 @@ InputPath=..\library\parray.tcl
 InputName=parray
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\Debug_IPv6\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -678,7 +678,7 @@ InputPath=..\library\safe.tcl
 InputName=safe
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\Debug_IPv6\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -718,7 +718,7 @@ InputPath=..\library\word.tcl
 InputName=word
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\Debug_IPv6\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
