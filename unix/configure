@@ -4879,7 +4879,8 @@ if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
 else
     TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
 fi
-TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
+#TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
+TCL_BUILD_LIB_SPEC="`pwd`/libtcl8.0.a"
 TCL_LIB_SPEC="-L${exec_prefix}/lib ${TCL_LIB_FLAG}"
 
 # tclConfig.sh needs a version of the _LIB_SUFFIX that has been eval'ed
