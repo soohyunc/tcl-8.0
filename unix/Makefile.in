@@ -332,7 +332,7 @@ DL_SRCS = \
 
 SRCS = $(GENERIC_SRCS) $(UNIX_SRCS)
 
-all: ${TCL_LIB_FILE} #tclsh
+all: ${TCL_LIB_FILE} tclsh
 
 # The following target is configured by autoconf to generate either
 # a shared library or non-shared library for Tcl.
