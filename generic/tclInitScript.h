@@ -62,6 +62,14 @@
  * alternate tclInit procedure before calling Tcl_Init().
  */
 
+static char initScript[] = "\
+    global tcl_library tcl_version tcl_patchLevel errorInfo\n\
+    global tcl_pkgPath env tclDefaultLibrary\n\
+    set tcl_library {}\n\
+    set tcl_pkgPath {}\n\
+";
+	
+#ifdef NDEF
 static char initScript[] = "if {[info proc tclInit]==\"\"} {\n\
   proc tclInit {} {\n\
     global tcl_library tcl_version tcl_patchLevel errorInfo\n\
@@ -110,6 +118,7 @@ static char initScript[] = "if {[info proc tclInit]==\"\"} {\n\
   }\n\
 }\n\
 tclInit";
+#endif
 
 /*
  * A pointer to a string that holds an initialization script that if non-NULL
