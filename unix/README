@@ -29,23 +29,8 @@ How To Compile And Install Tcl:
     Makefile.  The configure script allows you to customize the Tcl
     configuration for your site; for details on how you can do this,
     type "./configure -help" or refer to the autoconf documentation (not
-    included here).  Tcl's "configure" supports the following special
-    switches in addition to the standard ones:
-	--enable-gcc		If this switch is set, Tcl will configure
-				itself to use gcc if it is available on your
-				system.  Note:  it is not safe to modify the
-				Makefile to use gcc after configure is run;
-				if you do this, then information related to
-				dynamic linking will be incorrect.
-	--disable-load		If this switch is specified then Tcl will
-				configure itself not to allow dynamic loading,
-				even if your system appears to support it.
-				Normally you can leave this switch out and
-				Tcl will build itself for dynamic loading
-				if your system supports it.
-	--enable-shared		If this switch is specified, Tcl will compile
-				itself as a shared library if it can figure
-				out how to do that on this platform.
+    included here).  
+
     Note: be sure to use only absolute path names (those starting with "/")
     in the --prefix and --exec_prefix options.
 
