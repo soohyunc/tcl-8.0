@@ -4,7 +4,7 @@
 
 # TARGTYPE "Win32 (x86) Static Library" 0x0104
 
-CFG=tcllib - Win32 Debug
+CFG=tcllib - Win32 Debug IPv6
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
 !MESSAGE 
@@ -13,12 +13,13 @@ CFG=tcllib - Win32 Debug
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "tcllib.mak" CFG="tcllib - Win32 Debug"
+!MESSAGE NMAKE /f "tcllib.mak" CFG="tcllib - Win32 Debug IPv6"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
 !MESSAGE "tcllib - Win32 Release" (based on "Win32 (x86) Static Library")
 !MESSAGE "tcllib - Win32 Debug" (based on "Win32 (x86) Static Library")
+!MESSAGE "tcllib - Win32 Debug IPv6" (based on "Win32 (x86) Static Library")
 !MESSAGE 
 
 # Begin Project
@@ -41,7 +42,7 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Release"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /YX /FD /c
-# ADD CPP /nologo /W3 /GX /Ot /Oi /Oy /Ob1 /Gf /Gy /D "BUILD_tcl" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD CPP /nologo /W3 /GX /Ot /Oi /Oy /Ob1 /Gf /Gy /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
 # SUBTRACT CPP /Ox /Oa /Ow /Og
 # ADD BASE RSC /l 0x809
 # ADD RSC /l 0x809
@@ -65,7 +66,30 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "Debug"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /GX /Z7 /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /YX /FD /c
-# ADD CPP /nologo /W3 /GX /Z7 /Od /D "BUILD_tcl" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD CPP /nologo /W3 /GX /Z7 /Od /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD BASE RSC /l 0x809
+# ADD RSC /l 0x809
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug IPv6"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "tcllib___Win32_Debug_IPv6"
+# PROP BASE Intermediate_Dir "tcllib___Win32_Debug_IPv6"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "Debug_IPv6"
+# PROP Intermediate_Dir "Debug_IPv6"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /GX /Z7 /Od /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
+# ADD CPP /nologo /W3 /GX /Z7 /Od /D "STATIC_BUILD" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MT" /D "_WIN32" /D _X86_=1 /D try=__try /D except=__except /YX /FD /I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc /c
 # ADD BASE RSC /l 0x809
 # ADD RSC /l 0x809
 BSC32=bscmake.exe
@@ -81,6 +105,7 @@ LIB32=link.exe -lib
 
 # Name "tcllib - Win32 Release"
 # Name "tcllib - Win32 Debug"
+# Name "tcllib - Win32 Debug IPv6"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
@@ -406,6 +431,17 @@ InputName=history
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\history.tcl
+InputName=history
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -432,6 +468,17 @@ InputName=http
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\http2.0\http.tcl
+InputName=http
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -464,6 +511,17 @@ InputName=init
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\init.tcl
+InputName=init
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -490,6 +548,17 @@ InputName=ldAout
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\ldAout.tcl
+InputName=ldAout
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -522,6 +591,17 @@ InputName=optparse
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\opt0.1\optparse.tcl
+InputName=optparse
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -548,6 +628,17 @@ InputName=parray
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\parray.tcl
+InputName=parray
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
@@ -580,6 +671,17 @@ InputName=safe
 
 # End Custom Build
 
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\safe.tcl
+InputName=safe
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -606,6 +708,17 @@ InputName=word
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug IPv6"
+
+# Begin Custom Build
+InputPath=..\library\word.tcl
+InputName=word
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	\src\rat\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
