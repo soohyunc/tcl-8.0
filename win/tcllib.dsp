@@ -86,6 +86,38 @@ LIB32=link.exe -lib
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
+SOURCE=.\lib_history.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_http.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_init.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_ldAout.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_optparse.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_parray.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_safe.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\lib_word.c
+# End Source File
+# Begin Source File
+
 SOURCE=..\generic\panic.c
 # End Source File
 # Begin Source File
@@ -214,10 +246,6 @@ SOURCE=..\generic\tclLoad.c
 # End Source File
 # Begin Source File
 
-SOURCE=..\generic\tclLoadNone.c
-# End Source File
-# Begin Source File
-
 SOURCE=..\generic\tclMain.c
 # End Source File
 # Begin Source File
@@ -326,6 +354,10 @@ SOURCE=.\tclWinPipe.c
 # End Source File
 # Begin Source File
 
+SOURCE=.\tclWinReg.c
+# End Source File
+# Begin Source File
+
 SOURCE=.\tclWinSock.c
 # End Source File
 # Begin Source File
@@ -340,6 +372,174 @@ SOURCE=.\tclWinTime.c
 # Begin Group "Header Files"
 
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=..\generic\tcl.h
+# End Source File
+# End Group
+# Begin Group "Tcl Files"
+
+# PROP Default_Filter ".tcl"
+# Begin Source File
+
+SOURCE=..\library\history.tcl
+
+!IF  "$(CFG)" == "tcllib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\history.tcl
+InputName=history
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\http2.0\http.tcl
+
+!IF  "$(CFG)" == "tcllib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\http2.0\http.tcl
+InputName=http
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\init.tcl
+
+!IF  "$(CFG)" == "tcllib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\init.tcl
+InputName=init
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\ldAout.tcl
+
+!IF  "$(CFG)" == "tcllib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\ldAout.tcl
+InputName=ldAout
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\opt0.1\optparse.tcl
+
+!IF  "$(CFG)" == "tcllib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\opt0.1\optparse.tcl
+InputName=optparse
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\parray.tcl
+
+!IF  "$(CFG)" == "tcllib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\parray.tcl
+InputName=parray
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\safe.tcl
+
+!IF  "$(CFG)" == "tcllib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\safe.tcl
+InputName=safe
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\library\word.tcl
+
+!IF  "$(CFG)" == "tcllib - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "tcllib - Win32 Debug"
+
+# Begin Custom Build
+InputPath=..\library\word.tcl
+InputName=word
+
+"lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	.\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+
+# End Custom Build
+
+!ENDIF 
+
+# End Source File
 # End Group
 # End Target
 # End Project
