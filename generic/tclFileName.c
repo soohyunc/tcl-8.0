@@ -1077,11 +1077,11 @@ DoTildeSubst(interp, user, resultPtr)
     char *dir;
 
     if (*user == '\0') {
-	dir = TclGetEnv("HOME");
+	dir = TclGetEnv("HOMEDIR");
 	if (dir == NULL) {
 	    if (interp) {
 		Tcl_ResetResult(interp);
-		Tcl_AppendResult(interp, "couldn't find HOME environment ",
+		Tcl_AppendResult(interp, "couldn't find HOMEDIR environment ",
 			"variable to expand path", (char *) NULL);
 	    }
 	    return NULL;
