@@ -239,7 +239,10 @@ GENERIC_OBJS = panic.o regexp.o tclAsync.o tclBasic.o tclBinary.o tclCkalloc.o \
 	tclPreserve.o tclProc.o tclStringObj.o tclTimer.o tclUtil.o tclVar.o \
 	tclResolve.o
 
-OBJS = ${GENERIC_OBJS} ${UNIX_OBJS} ${NOTIFY_OBJS} ${COMPAT_OBJS} @DL_OBJS@
+LIBRARY_OBJS=lib_history.o lib_init.o lib_ldAout.o lib_http.o \
+	lib_optparse.o lib_parray.o lib_safe.o lib_word.o
+
+OBJS = ${GENERIC_OBJS} ${UNIX_OBJS} ${NOTIFY_OBJS} ${COMPAT_OBJS} $(LIBRARY_OBJS) @DL_OBJS@
 
 GENERIC_HDRS = \
 	$(GENERIC_DIR)/tclRegexp.h \
@@ -329,7 +332,7 @@ DL_SRCS = \
 
 SRCS = $(GENERIC_SRCS) $(UNIX_SRCS)
 
-all: ${TCL_LIB_FILE} tclsh
+all: ${TCL_LIB_FILE} #tclsh
 
 # The following target is configured by autoconf to generate either
 # a shared library or non-shared library for Tcl.
@@ -425,7 +428,7 @@ dltest/Makefile: $(DLTEST_DIR)/configure $(DLTEST_DIR)/Makefile.in tclConfig.sh
 	cd dltest; if test -f configure; then ./configure; else \
 	    $(DLTEST_DIR)/configure; fi
 
-install: install-binaries install-libraries install-man
+#install: install-binaries install-libraries install-man
 
 # Note: before running ranlib below, must cd to target directory because
 # some ranlibs write to current directory, and this might not always be
@@ -529,7 +532,7 @@ Makefile: $(UNIX_DIR)/Makefile.in
 
 clean:
 	rm -f *.a *.o libtcl* core errs *~ \#* TAGS *.E a.out \
-		errors tclsh tcltest lib.exp
+		errors tclsh tcltest lib.exp tcl2c config.cache
 	if test -f dltest/Makefile; then cd dltest; $(MAKE) clean; fi
 
 distclean: clean
@@ -572,6 +575,42 @@ xtTestInit.o: $(UNIX_DIR)/tclAppInit.c
 	@if test -f tclAppInit.sav ; then \
 	    mv tclAppInit.sav tclAppInit.o; \
 	fi;
+
+# Library files
+$(UNIX_DIR)/tcl2c: $(GENERIC_DIR)/tcl2c.c
+	$(CC) $(GENERIC_DIR)/tcl2c.c -o $(UNIX_DIR)/tcl2c
+
+lib_history.o: $(TOP_DIR)/library/history.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_history < $(TOP_DIR)/library/history.tcl > $(UNIX_DIR)/lib_history.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_history.c
+
+lib_init.o: $(TOP_DIR)/library/init.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_init < $(TOP_DIR)/library/init.tcl > $(UNIX_DIR)/lib_init.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_init.c
+
+lib_ldAout.o: $(TOP_DIR)/library/ldAout.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_ldAout < $(TOP_DIR)/library/ldAout.tcl > $(UNIX_DIR)/lib_ldAout.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_ldAout.c
+
+lib_http.o: $(TOP_DIR)/library/http2.0/http.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_http < $(TOP_DIR)/library/http2.0/http.tcl > $(UNIX_DIR)/lib_http.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_http.c
+
+lib_optparse.o: $(TOP_DIR)/library/opt0.1/optparse.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_optparse < $(TOP_DIR)/library/opt0.1/optparse.tcl > $(UNIX_DIR)/lib_optparse.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_optparse.c
+
+lib_parray.o: $(TOP_DIR)/library/parray.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_parray < $(TOP_DIR)/library/parray.tcl > $(UNIX_DIR)/lib_parray.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_parray.c
+
+lib_safe.o: $(TOP_DIR)/library/safe.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_safe < $(TOP_DIR)/library/safe.tcl > $(UNIX_DIR)/lib_safe.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_safe.c
+
+lib_word.o: $(TOP_DIR)/library/word.tcl $(UNIX_DIR)/tcl2c
+	$(UNIX_DIR)/tcl2c lib_word < $(TOP_DIR)/library/word.tcl > $(UNIX_DIR)/lib_word.c
+	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/lib_word.c
 
 # Object files used on all Unix systems:
 
