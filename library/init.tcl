@@ -25,17 +25,18 @@ if {![info exists auto_path]} {
 	set auto_path ""
     }
 }
-if {[lsearch -exact $auto_path [info library]] < 0} {
-    lappend auto_path [info library]
-}
-catch {
-    foreach __dir $tcl_pkgPath {
-	if {[lsearch -exact $auto_path $__dir] < 0} {
-	    lappend auto_path $__dir
-	}
-    }
-    unset __dir
-}
+# Don't set up the auto_path, since we want to disable auto-loading (csp)
+#if {[lsearch -exact $auto_path [info library]] < 0} {
+#    lappend auto_path [info library]
+#}
+#catch {
+#    foreach __dir $tcl_pkgPath {
+#	if {[lsearch -exact $auto_path $__dir] < 0} {
+#	    lappend auto_path $__dir
+#	}
+#    }
+#    unset __dir
+#}
 
 # Windows specific initialization to handle case isses with envars
 
@@ -109,16 +110,6 @@ if {[info commands tclLog] == ""} {
 #
 #	1. See if the command has the form "namespace inscope ns cmd" and
 #	   if so, concatenate its arguments onto the end and evaluate it.
-#	2. See if the autoload facility can locate the command in a
-#	   Tcl script file.  If so, load it and execute it.
-#	3. If the command was invoked interactively at top-level:
-#	    (a) see if the command exists as an executable UNIX program.
-#		If so, "exec" the command.
-#	    (b) see if the command requests csh-like history substitution
-#		in one of the common forms !!, !<number>, or ^old^new.  If
-#		so, emulate csh's history substitution.
-#	    (c) see if the command is a unique abbreviation for another
-#		command.  If so, invoke the command.
 #
 # Arguments:
 # args -	A list whose elements are the words of the original
@@ -142,100 +133,6 @@ proc unknown args {
         }
     }
 
-    # Save the values of errorCode and errorInfo variables, since they
-    # may get modified if caught errors occur below.  The variables will
-    # be restored just before re-executing the missing command.
-
-    set savedErrorCode $errorCode
-    set savedErrorInfo $errorInfo
-    set name [lindex $args 0]
-    if {![info exists auto_noload]} {
-	#
-	# Make sure we're not trying to load the same proc twice.
-	#
-	if {[info exists unknown_pending($name)]} {
-	    return -code error "self-referential recursion in \"unknown\" for command \"$name\"";
-	}
-	set unknown_pending($name) pending;
-	set ret [catch {auto_load $name [uplevel 1 {namespace current}]} msg]
-	unset unknown_pending($name);
-	if {$ret != 0} {
-	    return -code $ret -errorcode $errorCode \
-		"error while autoloading \"$name\": $msg"
-	}
-	if {![array size unknown_pending]} {
-	    unset unknown_pending
-	}
-	if {$msg} {
-	    set errorCode $savedErrorCode
-	    set errorInfo $savedErrorInfo
-	    set code [catch {uplevel 1 $args} msg]
-	    if {$code ==  1} {
-		#
-		# Strip the last five lines off the error stack (they're
-		# from the "uplevel" command).
-		#
-
-		set new [split $errorInfo \n]
-		set new [join [lrange $new 0 [expr {[llength $new] - 6}]] \n]
-		return -code error -errorcode $errorCode \
-			-errorinfo $new $msg
-	    } else {
-		return -code $code $msg
-	    }
-	}
-    }
-
-    if {([info level] == 1) && ([info script] == "") \
-	    && [info exists tcl_interactive] && $tcl_interactive} {
-	if {![info exists auto_noexec]} {
-	    set new [auto_execok $name]
-	    if {$new != ""} {
-		set errorCode $savedErrorCode
-		set errorInfo $savedErrorInfo
-		set redir ""
-		if {[info commands console] == ""} {
-		    set redir ">&@stdout <@stdin"
-		}
-		return [uplevel exec $redir $new [lrange $args 1 end]]
-	    }
-	}
-	set errorCode $savedErrorCode
-	set errorInfo $savedErrorInfo
-	if {$name == "!!"} {
-	    set newcmd [history event]
-	} elseif {[regexp {^!(.+)$} $name dummy event]} {
-	    set newcmd [history event $event]
-	} elseif {[regexp {^\^([^^]*)\^([^^]*)\^?$} $name dummy old new]} {
-	    set newcmd [history event -1]
-	    catch {regsub -all -- $old $newcmd $new newcmd}
-	}
-	if {[info exists newcmd]} {
-	    tclLog $newcmd
-	    history change $newcmd 0
-	    return [uplevel $newcmd]
-	}
-
-	set ret [catch {set cmds [info commands $name*]} msg]
-	if {[string compare $name "::"] == 0} {
-	    set name ""
-	}
-	if {$ret != 0} {
-	    return -code $ret -errorcode $errorCode \
-		"error in unknown while checking if \"$name\" is a unique command abbreviation: $msg"
-	}
-	if {[llength $cmds] == 1} {
-	    return [uplevel [lreplace $args 0 0 $cmds]]
-	}
-	if {[llength $cmds] != 0} {
-	    if {$name == ""} {
-		return -code error "empty command name \"\""
-	    } else {
-		return -code error \
-			"ambiguous command name \"$name\": [lsort $cmds]"
-	    }
-	}
-    }
     return -code error "invalid command name \"$name\""
 }
 
@@ -252,37 +149,7 @@ proc unknown args {
 #                       for instance. If not given, namespace current is used.
 
 proc auto_load {cmd {namespace {}}} {
-    global auto_index auto_oldpath auto_path
-
-    if {[string length $namespace] == 0} {
-	set namespace [uplevel {namespace current}]
-    }
-    set nameList [auto_qualify $cmd $namespace]
-    # workaround non canonical auto_index entries that might be around
-    # from older auto_mkindex versions
-    lappend nameList $cmd
-    foreach name $nameList {
-	if {[info exists auto_index($name)]} {
-	    uplevel #0 $auto_index($name)
-	    return [expr {[info commands $name] != ""}]
-	}
-    }
-    if {![info exists auto_path]} {
-	return 0
-    }
-
-    if {![auto_load_index]} {
-	return 0
-    }
-
-    foreach name $nameList {
-	if {[info exists auto_index($name)]} {
-	    uplevel #0 $auto_index($name)
-	    if {[info commands $name] != ""} {
-		return 1
-	    }
-	}
-    }
+    # Don't do auto-loading in this version... (csp)
     return 0
 }
 
@@ -1533,6 +1400,9 @@ proc tclMacPkgSearch {dir} {
 # exact -		Either "-exact" or omitted.  Not used.
 
 proc tclPkgUnknown {name version {exact {}}} {
+    # We don't do auto-loading, so this is disabled... (csp)
+    return
+
     global auto_path tcl_platform env
 
     if {![info exists auto_path]} {
