@@ -324,7 +324,7 @@ Tcl_ErrnoId()
 #ifdef ENOTSOCK
 	case ENOTSOCK: return "ENOTSOCK";
 #endif
-#ifdef ENOTSUP
+#if defined(ENOTSUP) && (ENOTSUP != EOPNOTSUPP)
 	case ENOTSUP: return "ENOTSUP";
 #endif
 #ifdef ENOTTY
@@ -771,7 +771,7 @@ Tcl_ErrnoMsg(err)
 #ifdef ENOTSOCK
 	case ENOTSOCK: return "socket operation on non-socket";
 #endif
-#ifdef ENOTSUP
+#if defined(ENOTSUP) && (ENOTSUP != EOPNOTSUPP)
 	case ENOTSUP: return "operation not supported";
 #endif
 #ifdef ENOTTY
