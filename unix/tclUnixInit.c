@@ -23,6 +23,15 @@
 #   endif
 #endif
 
+extern char lib_history[];
+extern char lib_init[];
+extern char lib_ldAout[];
+extern char lib_http[];
+extern char lib_optparse[];
+extern char lib_parray[];
+extern char lib_safe[];
+extern char lib_word[];
+
 /*
  * Default directory in which to look for Tcl library scripts.  The
  * symbol is defined by Makefile.
@@ -215,6 +224,30 @@ Tcl_Init(interp)
 	if (Tcl_Eval(interp, tclPreInitScript) == TCL_ERROR) {
 	    return (TCL_ERROR);
 	};
+    }
+    if (Tcl_Eval(interp, lib_init) != TCL_OK) {
+	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_optparse) != TCL_OK) {
+	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_safe) != TCL_OK) {
+	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_history) != TCL_OK) {
+	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_ldAout) != TCL_OK) {
+	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_parray) != TCL_OK) {
+	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_word) != TCL_OK) {
+	return TCL_ERROR;
+    }
+    if (Tcl_Eval(interp, lib_http) != TCL_OK) {
+	return TCL_ERROR;
     }
     return(Tcl_Eval(interp, initScript));
 }
