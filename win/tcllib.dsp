@@ -718,7 +718,7 @@ InputPath=..\library\word.tcl
 InputName=word
 
 "lib_$(InputName).c" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
-	\src\tcl-8.0\win\tcl2c\Debug\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
+	\src\tcl-8.0\win\tcl2c\tcl2c.exe lib_$(InputName) < $(InputPath) > lib_$(InputName).c
 
 # End Custom Build
 
