@@ -1077,7 +1077,11 @@ DoTildeSubst(interp, user, resultPtr)
     char *dir;
 
     if (*user == '\0') {
+#ifdef WIN32
+	dir = TclGetEnv("HOMEDIR");
+#else
 	dir = TclGetEnv("HOME");
+#endif
 	if (dir == NULL) {
 	    if (interp) {
 		Tcl_ResetResult(interp);
