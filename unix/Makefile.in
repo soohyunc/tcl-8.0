@@ -332,7 +332,7 @@ DL_SRCS = \
 
 SRCS = $(GENERIC_SRCS) $(UNIX_SRCS)
 
-all: ${TCL_LIB_FILE} tclsh
+all: ${TCL_LIB_FILE} #tclsh
 
 # The following target is configured by autoconf to generate either
 # a shared library or non-shared library for Tcl.
@@ -428,7 +428,7 @@ dltest/Makefile: $(DLTEST_DIR)/configure $(DLTEST_DIR)/Makefile.in tclConfig.sh
 	cd dltest; if test -f configure; then ./configure; else \
 	    $(DLTEST_DIR)/configure; fi
 
-install: install-binaries install-libraries install-man
+#install: install-binaries install-libraries install-man
 
 # Note: before running ranlib below, must cd to target directory because
 # some ranlibs write to current directory, and this might not always be
