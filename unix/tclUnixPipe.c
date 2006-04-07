@@ -185,7 +185,7 @@ TclpCreateTempFile(contents, namePtr)
     TclFile file;
     size_t length = (contents == NULL) ? 0 : strlen(contents);
 
-    tmpnam(fileName);
+    mkstemp(fileName); //SV-XXX: was tmpnam, but the use of `tmpnam' is dangerous, better use `mkstemp'
     file = TclpOpenFile(fileName, O_RDWR|O_CREAT|O_TRUNC);
     unlink(fileName);
 
