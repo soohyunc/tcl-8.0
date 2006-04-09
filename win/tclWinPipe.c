@@ -150,7 +150,7 @@ typedef struct PipeEvent {
  * Declarations for functions used only in this file.
  */
 
-static int	ApplicationType(Tcl_Interp *interp, const char *fileName,
+static int	ApplicationTypeTcl(Tcl_Interp *interp, const char *fileName,
 		    char *fullName);
 static void	BuildCommandLine(int argc, char **argv, Tcl_DString *linePtr);
 static void	CopyChannel(HANDLE dst, HANDLE src);
@@ -908,7 +908,7 @@ TclpCreateProcess(interp, argc, argv, inputFile, outputFile, errorFile,
 	PipeInit();
     }
 
-    applType = ApplicationType(interp, argv[0], execPath);
+    applType = ApplicationTypeTcl(interp, argv[0], execPath);
     if (applType == APPL_NONE) {
 	return TCL_ERROR;
     }
@@ -1390,7 +1390,7 @@ HasConsole()
 /*
  *--------------------------------------------------------------------
  *
- * ApplicationType --
+ * ApplicationTypeTcl --
  *
  *	Search for the specified program and identify if it refers to a DOS,
  *	Windows 3.X, or Win32 program.  Used to determine how to invoke 
@@ -1424,7 +1424,7 @@ HasConsole()
  */
 
 static int
-ApplicationType(interp, originalName, fullPath)
+ApplicationTypeTcl(interp, originalName, fullPath)
     Tcl_Interp *interp;		/* Interp, for error message. */
     const char *originalName;	/* Name of the application to find. */
     char fullPath[MAX_PATH];	/* Filled with complete path to 
