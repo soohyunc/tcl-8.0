@@ -3604,6 +3604,6 @@ were updated to restore import links. (Note that if you rename a command,
 the import links move to the new name, and if you delete a command then
 the import links get lost. These semantics have not changed.) (MC)
 
-12/4/06 Renamed ApplicationType to ApplicationTypeTcl as it clashes with a 
+12/4/06 (8.0.3ucl9) Renamed ApplicationType to ApplicationTypeTcl as it clashes with a 
 Windows type definition.
 -------- Released 8.0.3 to the Tcl Consortium CD-ROM project, 8/10/98 ------
