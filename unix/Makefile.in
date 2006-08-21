@@ -154,8 +154,8 @@ INSTALL_DATA =		${INSTALL} -m 644
 # Tcl itself to be a shared library.  If Tcl isn't going to be a
 # shared library then the symbol has an empty definition.
 
-TCL_SHLIB_CFLAGS = @TCL_SHLIB_CFLAGS@
-#TCL_SHLIB_CFLAGS =
+#TCL_SHLIB_CFLAGS = @TCL_SHLIB_CFLAGS@
+TCL_SHLIB_CFLAGS =
 
 # The symbols below provide support for dynamic loading and shared
 # libraries.  See configure.in for a description of what the
