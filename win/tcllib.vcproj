@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="7.00"
+	Version="7.10"
 	Name="tcllib"
-	RootNamespace="tcllib"
 	SccProjectName=""
 	SccLocalPath="">
 	<Platforms>
@@ -2120,7 +2119,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="$(ProjectDir)tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c"
+						CommandLine="tcl2c\tcl2c.exe lib_&quot;$(InputName)&quot; &lt; &quot;$(InputPath)&quot; &gt; lib_&quot;$(InputName)&quot;.c
+"
 						Outputs="lib_$(InputName).c"/>
 				</FileConfiguration>
 			</File>
