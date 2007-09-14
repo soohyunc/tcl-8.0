@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="tcllib"
+	SccProjectName=""
+	SccLocalPath="">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\Release"
+			IntermediateDirectory=".\Release"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
+				Optimization="0"
+				InlineFunctionExpansion="1"
+				EnableIntrinsicFunctions="TRUE"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="TRUE"
+				AdditionalIncludeDirectories="..\generic"
+				PreprocessorDefinitions="STATIC_BUILD,WIN32,NDEBUG,_WINDOWS,_MT,_WIN32,_X86_=1,try=__try,except=__except"
+				StringPooling="TRUE"
+				RuntimeLibrary="4"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Release/tcllib.pch"
+				AssemblerListingLocation=".\Release/"
+				ObjectFile=".\Release/"
+				ProgramDataBaseFileName=".\Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\Release\tcllib.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="2057"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\Debug"
+			IntermediateDirectory=".\Debug"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
+				Optimization="0"
+				AdditionalIncludeDirectories="..\generic"
+				PreprocessorDefinitions="STATIC_BUILD,WIN32,NDEBUG,_WINDOWS,_MT,_WIN32,_X86_=1,try=__try,except=__except"
+				RuntimeLibrary="5"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=".\Debug/tcllib.pch"
+				AssemblerListingLocation=".\Debug/"
+				ObjectFile=".\Debug/"
+				ProgramDataBaseFileName=".\Debug/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="1"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\Debug\tcllib.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="2057"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="DDraw Release GPL|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
+				Optimization="0"
+				InlineFunctionExpansion="1"
+				EnableIntrinsicFunctions="TRUE"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="TRUE"
+				AdditionalIncludeDirectories="..\generic"
+				PreprocessorDefinitions="STATIC_BUILD,WIN32,NDEBUG,_WINDOWS,_MT,_WIN32,_X86_=1,try=__try,except=__except"
+				StringPooling="TRUE"
+				RuntimeLibrary="4"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Release/tcllib.pch"
+				AssemblerListingLocation=".\Release/"
+				ObjectFile=".\Release/"
+				ProgramDataBaseFileName=".\Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\Release\tcllib.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="2057"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="DDraw Debug tcltk84|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
+				Optimization="0"
+				InlineFunctionExpansion="1"
+				EnableIntrinsicFunctions="TRUE"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="TRUE"
+				AdditionalIncludeDirectories="..\generic"
+				PreprocessorDefinitions="STATIC_BUILD,WIN32,NDEBUG,_WINDOWS,_MT,_WIN32,_X86_=1,try=__try,except=__except"
+				StringPooling="TRUE"
+				RuntimeLibrary="4"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Release/tcllib.pch"
+				AssemblerListingLocation=".\Release/"
+				ObjectFile=".\Release/"
+				ProgramDataBaseFileName=".\Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\Release\tcllib.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="2057"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="DDraw Debug GPL tcltk84|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
+				Optimization="0"
+				AdditionalIncludeDirectories="..\generic"
+				PreprocessorDefinitions="STATIC_BUILD,WIN32,NDEBUG,_WINDOWS,_MT,_WIN32,_X86_=1,try=__try,except=__except"
+				RuntimeLibrary="5"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=".\Debug/tcllib.pch"
+				AssemblerListingLocation=".\Debug/"
+				ObjectFile=".\Debug/"
+				ProgramDataBaseFileName=".\Debug/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="1"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\Debug\tcllib.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="2057"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="DDraw Release tcltk84|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
+				Optimization="0"
+				InlineFunctionExpansion="1"
+				EnableIntrinsicFunctions="TRUE"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="TRUE"
+				AdditionalIncludeDirectories="..\generic"
+				PreprocessorDefinitions="STATIC_BUILD,WIN32,NDEBUG,_WINDOWS,_MT,_WIN32,_X86_=1,try=__try,except=__except"
+				StringPooling="TRUE"
+				RuntimeLibrary="4"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Release/tcllib.pch"
+				AssemblerListingLocation=".\Release/"
+				ObjectFile=".\Release/"
+				ProgramDataBaseFileName=".\Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\Release\tcllib.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="2057"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="DDraw Relase GPL tcltk84|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/I /src/tcl-8.0/win /I /src/tcl-8.0/generic /I /src/tk-8.0/win /I /src/tk-8.0/generic /I /src/tk-8.0/xlib /I /src/tk-8.0/bitmaps /I /src/tk-8.0/win/rc "
+				Optimization="0"
+				InlineFunctionExpansion="1"
+				EnableIntrinsicFunctions="TRUE"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="TRUE"
+				AdditionalIncludeDirectories="..\generic"
+				PreprocessorDefinitions="STATIC_BUILD,WIN32,NDEBUG,_WINDOWS,_MT,_WIN32,_X86_=1,try=__try,except=__except"
+				StringPooling="TRUE"
+				RuntimeLibrary="4"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Release/tcllib.pch"
+				AssemblerListingLocation=".\Release/"
+				ObjectFile=".\Release/"
+				ProgramDataBaseFileName=".\Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\Release\tcllib.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				Culture="2057"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File
+				RelativePath=".\lib_history.c">
+			</File>
+			<File
+				RelativePath=".\lib_http.c">
+			</File>
+			<File
+				RelativePath=".\lib_init.c">
+			</File>
+			<File
+				RelativePath=".\lib_ldAout.c">
+			</File>
+			<File
+				RelativePath=".\lib_optparse.c">
+			</File>
+			<File
+				RelativePath=".\lib_parray.c">
+			</File>
+			<File
+				RelativePath=".\lib_safe.c">
+			</File>
+			<File
+				RelativePath=".\lib_word.c">
+			</File>
+			<File
+				RelativePath="..\generic\panic.c">
+			</File>
+			<File
+				RelativePath="..\generic\regexp.c">
+			</File>
+			<File
+				RelativePath="..\compat\strftime.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclAlloc.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclAsync.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclBasic.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclBinary.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclCkalloc.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclClock.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclCmdAH.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclCmdIL.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclCmdMZ.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclCompExpr.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclCompile.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclDate.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclEnv.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclEvent.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclExecute.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclFCmd.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclFileName.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclGet.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclHash.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclHistory.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclIndexObj.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclInterp.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclIO.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclIOCmd.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclIOSock.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclIOUtil.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclLink.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclListObj.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclLoad.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclMain.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclNamesp.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclNotify.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclObj.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclParse.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclPipe.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclPkg.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclPosixStr.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclPreserve.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclProc.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclResolve.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclStringObj.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclTest.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclTestObj.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclTimer.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclUtil.c">
+			</File>
+			<File
+				RelativePath="..\generic\tclVar.c">
+			</File>
+			<File
+				RelativePath=".\tclWin32Dll.c">
+			</File>
+			<File
+				RelativePath=".\tclWinChan.c">
+			</File>
+			<File
+				RelativePath=".\tclWinError.c">
+			</File>
+			<File
+				RelativePath=".\tclWinFCmd.c">
+			</File>
+			<File
+				RelativePath=".\tclWinFile.c">
+			</File>
+			<File
+				RelativePath=".\tclWinInit.c">
+			</File>
+			<File
+				RelativePath=".\tclWinLoad.c">
+			</File>
+			<File
+				RelativePath=".\tclWinMtherr.c">
+			</File>
+			<File
+				RelativePath=".\tclWinNotify.c">
+			</File>
+			<File
+				RelativePath=".\tclWinPipe.c">
+			</File>
+			<File
+				RelativePath=".\tclWinReg.c">
+			</File>
+			<File
+				RelativePath=".\tclWinSock.c">
+			</File>
+			<File
+				RelativePath=".\tclWinTest.c">
+			</File>
+			<File
+				RelativePath=".\tclWinTime.c">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl">
+			<File
+				RelativePath="..\generic\tcl.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Tcl Files"
+			Filter=".tcl">
+			<File
+				RelativePath="..\library\history.tcl">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release GPL|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Relase GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\http2.0\http.tcl">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release GPL|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Relase GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\init.tcl">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release GPL|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Relase GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\ldAout.tcl">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release GPL|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Relase GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\opt0.1\optparse.tcl">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release GPL|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Relase GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\parray.tcl">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release GPL|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Relase GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\safe.tcl">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release GPL|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Relase GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\library\word.tcl">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release GPL|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Debug GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Release tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="DDraw Relase GPL tcltk84|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="tcl2c\tcl2c.exe lib_$(InputName) &lt; $(InputPath) &gt; lib_$(InputName).c
+"
+						Outputs="lib_$(InputName).c"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
