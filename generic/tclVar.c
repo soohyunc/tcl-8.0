@@ -1024,8 +1024,8 @@ char *
 Tcl_SetVar(interp, varName, newValue, flags)
     Tcl_Interp *interp;		/* Command interpreter in which varName is
 				 * to be looked up. */
-    char *varName;		/* Name of a variable in interp. */
-    char *newValue;		/* New value for varName. */
+    const char *varName;		/* Name of a variable in interp. */
+    const char *newValue;		/* New value for varName. */
     int flags;			/* Various flags that tell how to set value:
 				 * any of TCL_GLOBAL_ONLY,
 				 * TCL_NAMESPACE_ONLY, TCL_APPEND_VALUE,

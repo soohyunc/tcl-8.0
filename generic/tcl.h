@@ -1384,7 +1384,7 @@ EXTERN Tcl_Channel	Tcl_OpenCommandChannel _ANSI_ARGS_((
     			    Tcl_Interp *interp, int argc, char **argv,
 			    int flags));
 EXTERN Tcl_Channel	Tcl_OpenFileChannel _ANSI_ARGS_((Tcl_Interp *interp,
-        		    char *fileName, char *modeString,
+        		    const char *fileName, const char *modeString,
                             int permissions));
 EXTERN Tcl_Channel	Tcl_OpenTcpClient _ANSI_ARGS_((Tcl_Interp *interp,
 			    int port, char *address, char *myaddr,
@@ -1480,7 +1480,7 @@ EXTERN void		Tcl_SetStringObj _ANSI_ARGS_((Tcl_Obj *objPtr,
 			    char *bytes, int length));
 EXTERN void		Tcl_SetTimer _ANSI_ARGS_((Tcl_Time *timePtr));
 EXTERN char *		Tcl_SetVar _ANSI_ARGS_((Tcl_Interp *interp,
-			    char *varName, char *newValue, int flags));
+			    const char *varName, const char *newValue, int flags));
 EXTERN char *		Tcl_SetVar2 _ANSI_ARGS_((Tcl_Interp *interp,
 			    char *part1, char *part2, char *newValue,
 			    int flags));

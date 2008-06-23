@@ -548,8 +548,8 @@ Tcl_Channel
 Tcl_OpenFileChannel(interp, fileName, modeString, permissions)
     Tcl_Interp *interp;                 /* Interpreter for error reporting;
                                          * can be NULL. */
-    char *fileName;                     /* Name of file to open. */
-    char *modeString;                   /* A list of POSIX open modes or
+    const char *fileName;                     /* Name of file to open. */
+    const char *modeString;                   /* A list of POSIX open modes or
                                          * a string such as "rw". */
     int permissions;                    /* If the open involves creating a
                                          * file, with what modes to create
